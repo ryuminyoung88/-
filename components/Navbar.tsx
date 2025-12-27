@@ -5,85 +5,75 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-8 pointer-events-none">
       <div className="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
-        <div className="flex items-center gap-5">
-          {/* Advanced Cybernetic Logo */}
-          <div className="relative group cursor-pointer">
-             {/* Chromatic Aberration Shadows */}
-             <div className="absolute inset-0 bg-magenta-500/20 rounded-lg blur-md -translate-x-1 translate-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-             <div className="absolute inset-0 bg-cyan-500/20 rounded-lg blur-md translate-x-1 -translate-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-             <div className="relative w-14 h-14 flex items-center justify-center">
-                {/* Rotating Outer Ring */}
-                <svg className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite] opacity-40" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="48" fill="none" stroke="#00f2ff" strokeWidth="1" strokeDasharray="4 8" />
-                </svg>
-                
-                {/* Hexagonal Frame */}
-                <div className="absolute inset-0 bg-black/80 border border-cyan-500/30 clip-hex shadow-[inset_0_0_15px_rgba(0,242,255,0.2)]"></div>
-                
-                {/* Internal Pulsing Core */}
-                <div className="relative z-10 w-8 h-8 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-cyan-500 rounded-sm rotate-45 animate-pulse opacity-20"></div>
-                  <div className="absolute inset-1.5 border border-white/40 rotate-45 group-hover:scale-110 transition-transform"></div>
-                  <i className="fas fa-bolt text-cyan-400 text-sm drop-shadow-[0_0_8px_#00f2ff] group-hover:animate-bounce"></i>
-                </div>
-
-                {/* Status Indicator */}
-                <div className="absolute -top-1 -right-1 w-4 h-4 flex items-center justify-center">
-                   <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-20"></div>
-                   <div className="w-2 h-2 bg-red-500 rounded-full border border-black"></div>
-                </div>
-
-                {/* Data Decals */}
-                <div className="absolute -bottom-1 -left-1 flex gap-0.5">
-                   <div className="w-1 h-3 bg-cyan-500/50"></div>
-                   <div className="w-1 h-2 bg-indigo-500/50"></div>
-                </div>
-             </div>
+        <div className="flex items-center gap-6 group cursor-pointer">
+          {/* DEEPSCALA Advanced Cybernetic Logo */}
+          <div className="relative h-16 w-16">
+            <div className="absolute inset-0 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-400/30 transition-all duration-700"></div>
+            
+            {/* Dual Outer Rotating Rings */}
+            <div className="absolute inset-0 border border-dashed border-cyan-500/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+            <div className="absolute inset-2 border border-dotted border-indigo-500/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+            
+            {/* Deep-Scala Hexagonal Core with Custom SVG Symbol */}
+            <div className="absolute inset-1 bg-black border border-cyan-500/40 [clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)] flex items-center justify-center overflow-hidden group-hover:border-white/60 transition-all duration-500 shadow-[inset_0_0_20px_rgba(0,242,255,0.2)]">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-indigo-900/20"></div>
+              
+              {/* Symbolic "D+S" Vector Logo */}
+              <svg viewBox="0 0 100 100" className="w-8 h-8 relative z-10 fill-none stroke-cyan-400 group-hover:stroke-white transition-colors duration-500" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
+                {/* "D" Shape */}
+                <path d="M30 25 V75 C30 75 70 75 70 50 C70 25 30 25 30 25" className="opacity-80" />
+                {/* "S" Path Overlay */}
+                <path d="M40 40 L60 40 L40 60 L60 60" className="stroke-indigo-400" strokeWidth="4" />
+                {/* Central Data Node */}
+                <circle cx="50" cy="50" r="2" fill="white" className="animate-pulse" />
+              </svg>
+              
+              {/* Vertical Scanning Beam */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_15px_#00f2ff] animate-[logoScan_2s_ease-in-out_infinite]"></div>
+            </div>
+            
+            {/* Dynamic Status Indicator */}
+            <div className="absolute top-0 right-0 w-3 h-3 flex items-center justify-center">
+              <div className="w-full h-full bg-white rounded-full animate-ping opacity-20"></div>
+              <div className="absolute w-1.5 h-1.5 bg-cyan-400 rounded-full shadow-[0_0_8px_#00f2ff]"></div>
+            </div>
           </div>
 
-          {/* Brand Name Text Section */}
           <div className="flex flex-col">
-            <span className="font-black tracking-[0.15em] text-2xl uppercase italic leading-none text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-indigo-500 drop-shadow-[0_0_12px_rgba(0,242,255,0.6)] hover:tracking-[0.18em] transition-all duration-500 cursor-default">
-              RYU KEUNYOUNG
-            </span>
-            <div className="flex items-center gap-2 mt-1.5">
-              <div className="flex gap-1">
-                <div className="w-2 h-0.5 bg-cyan-500"></div>
-                <div className="w-4 h-0.5 bg-cyan-500/30"></div>
-              </div>
-              <span className="font-mono text-[9px] text-cyan-500 tracking-[0.25em] uppercase font-bold">AI Solutions Architect</span>
-              <span className="w-1 h-1 bg-cyan-500 rounded-full animate-ping"></span>
+            <div className="relative overflow-hidden group">
+              <span className="font-black tracking-[0.25em] text-3xl uppercase italic leading-none text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-indigo-500 drop-shadow-[0_0_15px_rgba(0,242,255,0.4)] select-none block transition-transform group-hover:scale-[1.02]">
+                DEEPSCALA
+              </span>
+              {/* Text Hover Flow Effect */}
+              <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-gradient-to-r from-cyan-400 to-transparent group-hover:w-full transition-all duration-700"></div>
+            </div>
+            <div className="flex items-center gap-2 mt-2">
+              <div className="w-8 h-[1px] bg-cyan-500/30"></div>
+              <span className="font-mono text-[9px] text-cyan-500/60 tracking-[0.4em] uppercase font-black italic">Neural_Architect</span>
             </div>
           </div>
         </div>
         
-        <div className="flex gap-4 md:gap-8 items-center">
+        <div className="flex gap-4 md:gap-10 items-center">
           <div className="hidden lg:flex flex-col items-end">
-            <span className="font-mono text-[8px] text-gray-500 tracking-[0.2em] uppercase font-bold">Network_Provider</span>
+            <span className="font-mono text-[8px] text-gray-700 tracking-[0.3em] uppercase font-bold">Node_Status: 200_OK</span>
             <div className="flex items-center gap-2">
-              <svg width="10" height="10" viewBox="0 0 512 512" fill="white"><path d="M256 48l240 416H16z"/></svg>
-              <span className="font-mono text-[10px] text-white tracking-[0.1em] uppercase font-bold">Vercel_Edge</span>
+              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full shadow-[0_0_8px_#10b981]"></div>
+              <span className="font-mono text-[10px] text-white/80 tracking-[0.15em] uppercase font-black italic">Network_Scaling_Active</span>
             </div>
           </div>
           
-          <div className="w-px h-6 bg-white/10 hidden md:block"></div>
-          
-          <div className="flex flex-col items-end">
-             <span className="font-mono text-[8px] text-gray-500 tracking-[0.2em] uppercase font-bold">DNS_Resolution</span>
-             <span className="font-mono text-[10px] text-cyan-400 tracking-[0.1em] uppercase animate-pulse">GLOBAL_ANYCAST // ACTIVE</span>
-          </div>
-
-          <button className="text-[10px] font-mono font-bold uppercase tracking-widest text-cyan-400 bg-cyan-400/5 border border-cyan-400/20 py-2.5 px-6 rounded hover:bg-cyan-400 hover:text-black transition-all group overflow-hidden relative">
-            <div className="absolute inset-0 bg-cyan-400 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></div>
-            Secure_Access
+          <button className="text-[10px] font-mono font-black uppercase tracking-[0.2em] text-cyan-400 bg-white/[0.03] border border-cyan-400/20 py-3.5 px-9 rounded-sm hover:border-cyan-400 hover:text-black transition-all group overflow-hidden relative">
+            <div className="absolute inset-0 bg-cyan-400 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 -z-10"></div>
+            CONNECT_CORE
           </button>
         </div>
       </div>
-      
       <style>{`
-        .clip-hex {
-          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        @keyframes logoScan {
+          0% { transform: translateY(-100%); opacity: 0; }
+          50% { opacity: 1; }
+          100% { transform: translateY(400%); opacity: 0; }
         }
       `}</style>
     </nav>

@@ -45,7 +45,7 @@ const FinalManifesto: React.FC = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-20">
           
-          {/* Main Headline: Translated to English and size reduced by ~1.5x */}
+          {/* Main Headline */}
           <div className="flex flex-col items-center gap-6 group">
             <div className="flex items-center gap-4 opacity-70">
               <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full animate-ping"></span>
@@ -66,12 +66,12 @@ const FinalManifesto: React.FC = () => {
             </div>
           </div>
 
-          {/* Core Logic Manifesto: Translated and sized reduced by ~1.5x */}
+          {/* Core Logic Manifesto */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full max-w-4xl bg-white/5 p-1.5 rounded-md border border-white/10 backdrop-blur-sm">
             <div className="bg-[#050508]/80 p-8 flex flex-col gap-4 hover:bg-cyan-900/10 transition-colors group">
               <span className="font-mono text-[10px] text-gray-500 uppercase tracking-[0.2em] group-hover:text-cyan-500">Input_Protocol</span>
               <p className="font-mono text-sm md:text-base text-gray-400 leading-relaxed uppercase tracking-widest">
-                MY ARCHITECTURAL LOGIC <br className="hidden md:block"/> WILL SCALE YOUR CORE
+                DEEPSCALA LOGIC <br className="hidden md:block"/> WILL SCALE YOUR CORE
               </p>
             </div>
             <div className="bg-[#050508]/90 p-8 flex flex-col gap-4 border-x border-white/10 relative overflow-hidden group">
@@ -99,7 +99,7 @@ const FinalManifesto: React.FC = () => {
             }
           `}</style>
 
-          {/* Final Punchline: English established previously */}
+          {/* Final Punchline established previously */}
           <div className="relative w-full max-w-2xl">
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent shadow-[0_0_10px_#00f2ff]"></div>
             <div className="py-16 flex flex-col items-center gap-8">
@@ -109,7 +109,7 @@ const FinalManifesto: React.FC = () => {
                 </span>
                 <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 <span className="font-mono text-sm md:text-lg text-cyan-400 tracking-[0.5em] uppercase font-bold animate-pulse drop-shadow-[0_0_12px_#00f2ff]">
-                  I DELIVER THE RESULTS
+                  DEEPSCALA DELIVERS
                 </span>
               </div>
               
@@ -124,11 +124,11 @@ const FinalManifesto: React.FC = () => {
         </div>
       </div>
 
-      {/* Extreme Detail HUD Decals */}
+      {/* Extreme Detail HUD Decals - UPDATED NAME HERE */}
       <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-10 opacity-20">
         <div className="h-48 w-[1px] bg-gradient-to-b from-transparent via-cyan-500 to-transparent"></div>
         <div className="[writing-mode:vertical-lr] font-mono text-[10px] text-cyan-500 tracking-[0.8em] uppercase">
-          SECURE_CONNECTION_STABLE // ARCHITECT_RYU
+          SECURE_CONNECTION_STABLE // ARCHITECT_DEEPSCALA
         </div>
       </div>
       
