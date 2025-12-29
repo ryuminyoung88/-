@@ -20,7 +20,7 @@
         :root {
             --cyber-cyan: #00f2ff;
             --cyber-indigo: #6366f1;
-            --bg-void: #020204;
+            --bg-void: #010102;
         }
 
         body {
@@ -28,6 +28,7 @@
             background-color: var(--bg-void);
             color: #ffffff;
             overflow-x: hidden;
+            cursor: crosshair;
         }
 
         h1, h2, h3, .font-display {
@@ -38,22 +39,35 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
+        /* Noise Texture Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
         .cyber-grid {
             background-image: 
-                linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
+                linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
         }
 
         .scanline {
             width: 100%;
-            height: 2px;
-            background: rgba(0, 242, 255, 0.1);
+            height: 4px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.05), transparent);
             position: fixed;
             z-index: 99;
             pointer-events: none;
-            animation: scanline 8s linear infinite;
-            opacity: 0.3;
+            animation: scanline 10s linear infinite;
         }
 
         @keyframes scanline {
@@ -62,22 +76,46 @@
         }
 
         .glass-card {
-            background: rgba(10, 10, 15, 0.7);
-            backdrop-filter: blur(20px);
+            background: rgba(5, 5, 8, 0.8);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         ::-webkit-scrollbar {
-            width: 6px;
+            width: 4px;
         }
         ::-webkit-scrollbar-track {
             background: var(--bg-void);
         }
         ::-webkit-scrollbar-thumb {
-            background: #222;
-            border-radius: 10px;
+            background: #1a1a1a;
+            border-radius: 0px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: var(--cyber-cyan);
+        }
+
+        /* Glitch Animation */
+        .glitch {
+            position: relative;
+        }
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 2px;
+            text-shadow: -1px 0 red;
+            top: 0;
+            color: white;
+            background: black;
+            overflow: hidden;
+            clip: rect(0,900px,0,0); 
+            animation: noise-anim 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes noise-anim {
+          0% { clip: rect(10px, 9999px, 50px, 0); }
+          50% { clip: rect(80px, 9999px, 100px, 0); }
+          100% { clip: rect(30px, 9999px, 60px, 0); }
         }
     </style>
 <script type="importmap">

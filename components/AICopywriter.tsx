@@ -24,165 +24,144 @@ const AICopywriter: React.FC = () => {
   };
 
   return (
-    <section id="engine" className="py-32 px-6 bg-[#010102] relative">
-      <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none"></div>
+    <section id="engine" className="py-48 px-6 bg-[#010102] relative overflow-hidden">
+      <div className="absolute inset-0 cyber-grid opacity-10 pointer-events-none"></div>
       
-      <div className="max-w-5xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 gap-16">
-          {/* Header Section with Cybernetic Underline */}
-          <div className="text-center space-y-6 flex flex-col items-center">
-             <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 font-mono text-[10px] tracking-[0.3em] uppercase mb-2">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                Core Processor Ready
-             </div>
+      {/* Expanded Atmospheric Aura for better blending */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1000px] bg-[radial-gradient(circle_at_center,rgba(0,242,255,0.07)_0%,rgba(99,102,241,0.02)_40%,transparent_70%)] blur-[150px] pointer-events-none rounded-full"></div>
+
+      {/* Horizontal Visual Bridge Scan-line */}
+      <div className="absolute top-[42%] left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent blur-sm pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="flex flex-col items-center mb-24 space-y-10 overflow-visible">
+           <div className="flex items-center gap-6">
+              <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+              <span className="font-mono text-[9px] text-cyan-400 font-black tracking-[0.6em] uppercase italic">AI_STRATEGY_TERMINAL // v.2.0</span>
+              <div className="h-[1px] w-16 bg-gradient-to-l from-transparent via-cyan-500 to-transparent"></div>
+           </div>
+           
+           <div className="relative overflow-visible text-center">
+             {/* Background Ghost Text for Continuity */}
+             <h2 className="absolute -top-12 left-1/2 -translate-x-1/2 text-white/[0.01] text-7xl md:text-[12rem] font-black uppercase tracking-tighter select-none pointer-events-none italic whitespace-nowrap">
+               EVOLVE
+             </h2>
+
+             <h2 className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase text-white relative z-10 overflow-visible leading-[0.9]">
+               <span className="relative inline-block pb-2 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]">The</span> 
+               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-indigo-500 drop-shadow-[0_0_30px_rgba(0,242,255,0.4)] block md:inline md:mx-4 px-2">Evolution</span> 
+               <br className="hidden md:block"/> 
+               <span className="inline-block pr-12 pb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-indigo-400">Engine</span>
+             </h2>
              
-             <div className="relative inline-block">
-                <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                  Strategy <span className="text-cyan-400">Engine</span>
-                </h2>
-                
-                {/* Advanced Cyber Underline Structure */}
-                <div className="mt-4 flex flex-col items-center gap-1">
-                  {/* Primary Glow Line */}
-                  <div className="relative w-full h-[2px] bg-cyan-500/20 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400 to-transparent w-1/2 animate-[dataSweep_3s_infinite]"></div>
-                    <div className="absolute inset-0 shadow-[0_0_15px_#00f2ff]"></div>
-                  </div>
-                  
-                  {/* Complex Decal Line */}
-                  <div className="flex items-center gap-4 w-full justify-center">
-                    <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-cyan-500/50"></div>
-                    <div className="flex gap-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-500 rotate-45 shadow-[0_0_8px_#00f2ff]"></div>
-                      <div className="w-8 h-[3px] bg-cyan-500/40 rounded-full"></div>
-                      <div className="w-1.5 h-1.5 bg-cyan-500 rotate-45 shadow-[0_0_8px_#00f2ff]"></div>
-                    </div>
-                    <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-cyan-500/50"></div>
-                  </div>
-                  
-                  {/* Technical Coordinates */}
-                  <div className="flex justify-between w-full px-2 opacity-40">
-                    <span className="font-mono text-[8px] text-cyan-500">MARK_V_BUILD</span>
-                    <span className="font-mono text-[8px] text-cyan-500 tracking-[0.3em]">37.7749° N, 122.4194° W</span>
-                  </div>
-                </div>
+             {/* Technical HUD Underline */}
+             <div className="mt-8 flex items-center justify-center gap-4 opacity-30">
+                <div className="w-2 h-2 border border-cyan-500 rotate-45"></div>
+                <div className="h-px w-32 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+                <div className="w-2 h-2 border border-cyan-500 rotate-45"></div>
+             </div>
+           </div>
+        </div>
+
+        {/* TERMINAL UI */}
+        <div className="relative bg-[#050508]/60 backdrop-blur-3xl rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+          {/* Terminal Header */}
+          <div className="bg-white/[0.03] border-b border-white/10 px-10 py-5 flex justify-between items-center">
+             <div className="flex gap-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
+             </div>
+             <div className="font-mono text-[8px] text-gray-700 tracking-[0.4em] uppercase flex items-center gap-4 font-bold">
+                <span>GEMINI_FLASH_STABLE</span>
+                <span className="text-cyan-500/60">[CORE_ACCESS_AUTHORIZED]</span>
              </div>
           </div>
 
-          {/* Input Area */}
-          <div className="relative glass-card p-1 rounded-[2rem] overflow-hidden group">
-            {/* Animated Border Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-transparent to-indigo-500/20 opacity-50"></div>
-            
-            {/* HUD Corner Elements */}
-            <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-cyan-500 rounded-tl-3xl shadow-[-5px_-5px_15px_rgba(0,242,255,0.3)]"></div>
-            <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-cyan-500 rounded-tr-3xl shadow-[5px_-5px_15px_rgba(0,242,255,0.3)]"></div>
-            <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-indigo-500 rounded-bl-3xl shadow-[-5px_5px_15px_rgba(99,102,241,0.3)]"></div>
-            <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-indigo-500 rounded-br-3xl shadow-[5px_5px_15px_rgba(99,102,241,0.3)]"></div>
-            
-            <div className="bg-[#050508]/90 backdrop-blur-xl rounded-[1.8rem] p-8 md:p-14 relative z-10 border border-white/5">
-              <div className="flex items-center gap-2 mb-6 font-mono text-[9px] text-gray-500">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                SYSTEM_LISTENING_PROMPT_v2.0
-              </div>
-              
-              <textarea
-                className="w-full bg-transparent border-none text-xl md:text-2xl font-mono text-cyan-50 placeholder:text-gray-900 focus:outline-none min-h-[140px] resize-none"
-                placeholder="PROMPT: DESCRIBE TARGET BUSINESS OBJECTIVE..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              />
-              
-              <div className="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div className="flex gap-10">
-                  <div className="flex flex-col gap-1">
-                    <span className="font-mono text-[8px] text-gray-600 uppercase tracking-widest">Input_Entropy</span>
-                    <span className="font-mono text-xs text-cyan-500">{input.length} BYTES</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="font-mono text-[8px] text-gray-600 uppercase tracking-widest">Priority_Level</span>
-                    <span className="font-mono text-xs text-indigo-400">CLASS_OMEGA</span>
-                  </div>
+          <div className="p-10 md:p-20 flex flex-col gap-10">
+             <div className="relative">
+                <textarea
+                  className="w-full bg-transparent border-none text-xl md:text-3xl font-mono text-white placeholder:text-gray-900 focus:outline-none min-h-[140px] resize-none leading-snug"
+                  placeholder=">_ ENTER_BUSINESS_LOGIC_PARAMETERS..."
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                />
+                {!input && <div className="absolute left-[2px] top-[4px] w-6 h-10 bg-cyan-500/20 animate-pulse"></div>}
+             </div>
+
+             <div className="flex flex-col md:flex-row justify-between items-center gap-10 pt-10 border-t border-white/5">
+                <div className="flex gap-12">
+                   <div className="space-y-2">
+                      <span className="font-mono text-[8px] text-gray-700 uppercase tracking-widest block">Complexity_Index</span>
+                      <div className="flex gap-1">
+                        {[...Array(8)].map((_, i) => (
+                          <div key={i} className={`w-1.5 h-3 ${i < (input.length / 25) ? 'bg-cyan-500' : 'bg-gray-800'}`}></div>
+                        ))}
+                      </div>
+                   </div>
                 </div>
 
                 <button
                   onClick={handleGenerate}
                   disabled={loading}
-                  className={`relative px-12 py-5 rounded-xl font-black uppercase tracking-tighter transition-all flex items-center gap-6 group overflow-hidden
-                    ${loading ? 'bg-gray-900 text-gray-600 cursor-not-allowed' : 'bg-cyan-500 text-black hover:shadow-[0_0_40px_rgba(0,242,255,0.6)] active:scale-95'}`}
+                  className={`group relative px-12 py-5 bg-cyan-600 rounded-xl overflow-hidden transition-all transform active:scale-95 ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-[0_0_40px_rgba(0,242,255,0.4)]'}`}
                 >
-                  <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-                  <span className="relative z-10 flex items-center gap-4">
+                  <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                  <span className="relative z-10 font-black text-black uppercase tracking-tighter italic flex items-center gap-4 text-base">
                     {loading ? (
-                      <>
-                        <i className="fas fa-circle-notch animate-spin"></i>
-                        CALCULATING...
-                      </>
+                      <>CALCULATING <i className="fas fa-spinner animate-spin"></i></>
                     ) : (
-                      <>
-                        EXECUTE SEQUENCE
-                        <i className="fas fa-bolt animate-pulse"></i>
-                      </>
+                      <>EXECUTE_STRATEGY <i className="fas fa-bolt"></i></>
                     )}
                   </span>
                 </button>
-              </div>
+             </div>
+          </div>
+        </div>
+
+        {/* RESULTS - Optimized Cards */}
+        {strategy && (
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-12 gap-8 animate-in fade-in slide-in-from-bottom-10 duration-1000">
+            <div className="md:col-span-12 bg-[#050508]/40 backdrop-blur-xl p-12 md:p-16 rounded-[3rem] group border border-white/5 hover:border-cyan-500/20 transition-all">
+               <span className="font-mono text-[9px] text-cyan-500 font-black tracking-[0.4em] mb-6 block uppercase">Vector_Headline // Scale_Main</span>
+               <h3 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter uppercase leading-tight mb-6 group-hover:text-cyan-400 transition-colors pr-8">
+                 {strategy.headline}
+               </h3>
+               <p className="text-xl text-gray-500 font-light italic border-l-2 border-indigo-500/30 pl-6">
+                 "{strategy.slogan}"
+               </p>
+            </div>
+
+            <div className="md:col-span-5 bg-[#050508]/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/5 space-y-8 group overflow-hidden relative">
+               <span className="font-mono text-[9px] text-indigo-400 font-black tracking-[0.4em] block uppercase">Target_Architecture</span>
+               <p className="text-lg text-gray-300 font-light leading-relaxed">
+                 {strategy.targetAudience}
+               </p>
+               <div className="flex flex-wrap gap-2">
+                  {strategy.channelSuggestions.map((c, i) => (
+                    <span key={i} className="px-3 py-1.5 bg-indigo-500/5 border border-indigo-500/20 rounded-md font-mono text-[9px] text-indigo-400 font-bold uppercase">
+                      {c}
+                    </span>
+                  ))}
+               </div>
+            </div>
+
+            <div className="md:col-span-7 bg-[#050508]/40 backdrop-blur-xl p-10 rounded-[3rem] border border-white/5 space-y-8">
+               <span className="font-mono text-[9px] text-cyan-500 font-black tracking-[0.4em] block uppercase">Execution_Directives</span>
+               <div className="grid grid-cols-1 gap-6">
+                  {strategy.keyPoints.map((p, i) => (
+                    <div key={i} className="flex gap-6 group/item">
+                       <span className="font-mono text-lg text-cyan-500/20 font-black group-hover/item:text-cyan-400 transition-colors">0{i+1}</span>
+                       <p className="text-base text-gray-400 group-hover/item:text-white transition-colors leading-relaxed">
+                         {p}
+                       </p>
+                    </div>
+                  ))}
+               </div>
             </div>
           </div>
-
-          {error && (
-            <div className="flex items-center justify-center gap-4 text-red-500 font-mono text-sm bg-red-500/5 py-4 border border-red-500/20 rounded-lg animate-pulse">
-              <i className="fas fa-exclamation-triangle"></i>
-              {error}
-            </div>
-          )}
-
-          {strategy && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-              <div className="glass-card p-10 rounded-[2rem] border border-cyan-500/20 relative col-span-full group">
-                <div className="absolute top-0 right-0 p-4 font-mono text-[8px] text-cyan-500 opacity-30">RESULT_ID: {Math.random().toString(16).slice(2, 8).toUpperCase()}</div>
-                <span className="text-[10px] font-mono font-bold text-cyan-500 uppercase tracking-[0.3em] mb-4 block">Primary Vector // Headline</span>
-                <h3 className="text-4xl md:text-5xl font-black mb-4 text-white group-hover:text-cyan-400 transition-colors drop-shadow-[0_0_10px_rgba(0,242,255,0.2)]">{strategy.headline}</h3>
-                <p className="text-xl text-gray-500 italic font-light">"{strategy.slogan}"</p>
-              </div>
-
-              <div className="glass-card p-10 rounded-[2rem] border border-indigo-500/20 relative group overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent"></div>
-                <span className="text-[10px] font-mono font-bold text-indigo-400 uppercase tracking-[0.3em] mb-6 block">Target Demographics</span>
-                <p className="text-lg text-gray-200 mb-8 font-medium leading-relaxed">{strategy.targetAudience}</p>
-                <div className="flex flex-wrap gap-2">
-                  {strategy.channelSuggestions.map((c, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 rounded text-[10px] font-mono font-bold text-indigo-400 uppercase hover:bg-indigo-500/20 transition-colors cursor-default">{c}</span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="glass-card p-10 rounded-[2rem] border border-indigo-500/20 relative group overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent"></div>
-                <span className="text-[10px] font-mono font-bold text-indigo-400 uppercase tracking-[0.3em] mb-6 block">Tactical Directives</span>
-                <ul className="space-y-6">
-                  {strategy.keyPoints.map((p, i) => (
-                    <li key={i} className="flex gap-5 items-start group/item">
-                      <span className="text-cyan-500 font-mono text-xs mt-1.5 bg-cyan-500/10 w-6 h-6 flex items-center justify-center rounded border border-cyan-500/20 group-hover/item:bg-cyan-500 group-hover/item:text-black transition-all">0{i+1}</span>
-                      <p className="text-gray-400 group-hover:text-gray-200 transition-colors leading-relaxed">{p}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-        </div>
+        )}
       </div>
-      
-      <style>{`
-        @keyframes dataSweep {
-          0% { transform: translateX(-200%); }
-          100% { transform: translateX(200%); }
-        }
-      `}</style>
     </section>
   );
 };
